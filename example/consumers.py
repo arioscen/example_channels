@@ -10,7 +10,7 @@ import requests
 import csv
 from channels.auth import channel_session_user, channel_session_user_from_http
 
-KEYWORD_URL = 'https://goo.gl/gTajCT'
+KEYWORD_URL = 'https://goo.gl/G8sHwy'
 
 
 @channel_session_user_from_http
