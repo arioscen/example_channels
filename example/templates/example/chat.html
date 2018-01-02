@@ -8,12 +8,21 @@
 	<script src='{% static "example/channels.js" %}'></script>
 	<link rel="stylesheet" href='{% static "example/channels.css" %}'>
 </head>
-<body>
+<>
 {% if request.user.is_authenticated %}
     <p>{{request.user}} 您已經登入囉</p>
     <p><a href="{% url 'logout' %}?next={{request.path}}">登出</a></p>
 {% else %}
     <p>您尚未登入喔~<a href="{% url 'login' %}?next={{request.path}}">登入</a></p>
 {% endif %}
+<p>
+關鍵字回覆：
+會員
+付款
+發票
+運送
+瑕疵
+退款
+圖片
 </body>
 </html>
