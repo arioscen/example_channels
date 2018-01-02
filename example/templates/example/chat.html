@@ -8,7 +8,6 @@
 	<script src='{% static "example/channels.js" %}'></script>
 	<link rel="stylesheet" href='{% static "example/channels.css" %}'>
 </head>
-<>
 {% if request.user.is_authenticated %}
     <p>{{request.user}} 您已經登入囉</p>
     <p><a href="{% url 'logout' %}?next={{request.path}}">登出</a></p>
