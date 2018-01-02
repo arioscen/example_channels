@@ -1,0 +1,1 @@
+web: gunicorn --pythonpath example_channels example_channels.wsgi

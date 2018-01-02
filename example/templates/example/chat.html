@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Live Chat</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	{% load static %}
+	<script src='{% static "example/channels.js" %}'></script>
+	<link rel="stylesheet" href='{% static "example/channels.css" %}'>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+    <p>{{request.user}} 您已經登入囉</p>
+    <p><a href="{% url 'logout' %}?next={{request.path}}">登出</a></p>
+{% else %}
+    <p>您尚未登入喔~<a href="{% url 'login' %}?next={{request.path}}">登入</a></p>
+{% endif %}
+</body>
+</html>
